@@ -47,5 +47,14 @@ section.login-form{
 }
 
 .form-errors{
-  
+  background-color: $red;
+  border: 2px solid $darkred;
+  padding: 2em;
+  color: $white;
+  p{
+    margin-bottom: 1em;
+  }
+  li{
+    list-style-type: none;
+  }
 }

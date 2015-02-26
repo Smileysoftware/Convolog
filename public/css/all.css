@@ -454,6 +454,16 @@ section.login-form {
   border: 1px solid #DADADA;
   padding: 2em; }
 
+.form-errors {
+  background-color: #FF6262;
+  border: 2px solid #FF4242;
+  padding: 2em;
+  color: #fff; }
+  .form-errors p {
+    margin-bottom: 1em; }
+  .form-errors li {
+    list-style-type: none; }
+
 * {
   margin: 0;
   padding: 0; }
