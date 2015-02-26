@@ -23,9 +23,7 @@
 
     <body>
 
-        <section class="container">
-            @yield('content')
-        </section>
+        @yield('content')
 
     </body>
 

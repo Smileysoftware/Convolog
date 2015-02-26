@@ -1,5 +1,6 @@
 @import 'colours';
 @import 'forms';
+@import 'mixins';
 
 *{
   margin: 0;
@@ -62,6 +63,33 @@ header{
 body{
   h1{
     text-transform: uppercase;
+    font-weight: normal;
+  }
+}
+
+
+.big-block{
+  background-color: $green;
+  color: $white;
+  padding: 3em 0;
+  text-align: center;
+  p{
+    font-size: 75px;
+
+    @include white-seperator();
+
+  }
+
+  span{
+    display: block;
+    font-size: 45px;
+
+    @include white-seperator();
+
+  }
+  strong{
+    display: block;
+    font-size: 80px;
     font-weight: normal;
   }
 }

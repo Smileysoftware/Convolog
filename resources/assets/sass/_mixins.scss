@@ -1,0 +1,12 @@
+@mixin white-seperator() {
+
+  &:after {
+    content: "";
+    width: 315px;
+    height: 40px;
+    display: block;
+    background: url('../images/white-seperator.svg') no-repeat;
+    margin: 0.3em auto;
+  }
+
+}

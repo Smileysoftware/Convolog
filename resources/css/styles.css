@@ -85,5 +85,34 @@ body h1 {
   text-transform: uppercase;
   font-weight: normal; }
 
+.big-block {
+  background-color: #18BC9C;
+  color: #fff;
+  padding: 3em 0;
+  text-align: center; }
+  .big-block p {
+    font-size: 75px; }
+    .big-block p:after {
+      content: "";
+      width: 315px;
+      height: 40px;
+      display: block;
+      background: url('../images/white-seperator.svg') no-repeat;
+      margin: 0.3em auto; }
+  .big-block span {
+    display: block;
+    font-size: 45px; }
+    .big-block span:after {
+      content: "";
+      width: 315px;
+      height: 40px;
+      display: block;
+      background: url('../images/white-seperator.svg') no-repeat;
+      margin: 0.3em auto; }
+  .big-block strong {
+    display: block;
+    font-size: 80px;
+    font-weight: normal; }
+
 
 /*# sourceMappingURL=styles.css.map */
