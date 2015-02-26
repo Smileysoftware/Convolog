@@ -41,9 +41,9 @@ form.forms{
 section.login-form{
   width: 80%;
   margin: 0 auto;
-  background-color: $lightgrey;
-  border: 1px solid $darkgrey;
-  padding: 2em;
+
+  @include block();
+
 }
 
 .form-errors{

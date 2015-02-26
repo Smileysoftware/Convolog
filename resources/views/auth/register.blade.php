@@ -41,12 +41,6 @@
             </div>
 
             <div>
-                <label>
-                    <input type="checkbox" name="remember"> Remember Me
-                </label>
-            </div>
-
-            <div>
                 {!! Form::submit( 'Register' ) !!}
             </div>
 

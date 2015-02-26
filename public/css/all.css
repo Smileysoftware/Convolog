@@ -544,6 +544,11 @@ body h1 {
     font-size: 80px;
     font-weight: normal; }
 
+.block {
+  background-color: #eeeeee;
+  border: 1px solid #DADADA;
+  padding: 2em; }
+
 
 /*# sourceMappingURL=styles.css.map */
 /*# sourceMappingURL=all.css.map */

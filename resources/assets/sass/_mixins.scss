@@ -10,3 +10,11 @@
   }
 
 }
+
+@mixin block() {
+
+  background-color: $lightgrey;
+  border: 1px solid $darkgrey;
+  padding: 2em;
+
+}

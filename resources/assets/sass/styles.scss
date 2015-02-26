@@ -1,6 +1,7 @@
+@import 'mixins';
 @import 'colours';
 @import 'forms';
-@import 'mixins';
+
 
 *{
   margin: 0;
@@ -92,4 +93,9 @@ body{
     font-size: 80px;
     font-weight: normal;
   }
+}
+
+
+.block{
+  @include block();
 }
