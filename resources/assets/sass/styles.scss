@@ -1,0 +1,67 @@
+@import 'colours';
+@import 'forms';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: $green;
+  img{
+    border: none;
+  }
+}
+a:hover{
+  border-bottom: 2px solid $green;
+}
+
+header{
+  background: $blue;
+  color: #fff;
+  position: relative;
+  height: 80px;
+  strong{
+    font-weight: normal;
+    font-size: 35px;
+    a{
+      color: $white;
+      line-height: 80px;
+      padding: 0 1em;
+      display: inline-block;
+    }
+  }
+  nav{
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+    ul{
+      li{
+        display: inline-block;
+        a{
+          color: $white;
+          background-color: $darkblue;
+          display: inline-block;
+          padding: 1em;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 100;
+          margin-left: 0.5em
+        }
+        a:hover{
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+
+body{
+  h1{
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}

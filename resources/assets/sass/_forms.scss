@@ -1,0 +1,51 @@
+form.forms{
+
+  div{
+    margin-bottom: 1em;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=password]{
+    line-height: 120%;
+    padding: 0.5em;
+    width: 100%;
+  }
+
+  input[type=submit],
+  button{
+    display: inline-block;
+    background-color: $green;
+    color: $white;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 0 2em;
+    line-height: 3em;
+    border: none;
+
+    -webkit-transition: background 0.2s linear;
+    -moz-transition: background 0.2s linear;
+    -ms-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
+    transition: background 0.2s linear;
+
+  }
+
+  input[type=submit]:hover,
+  button:hover{
+    background-color: $darkgreen;
+
+  }
+
+}
+
+section.login-form{
+  width: 80%;
+  margin: 0 auto;
+  background-color: $lightgrey;
+  border: 1px solid $darkgrey;
+  padding: 2em;
+}
+
+.form-errors{
+  
+}
