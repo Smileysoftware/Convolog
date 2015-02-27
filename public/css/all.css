@@ -470,7 +470,11 @@ section.login-form {
   line-height: 3em;
   width: 100%;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1em; }
+
+.button:hover {
+  border-bottom: none; }
 
 .button-new {
   color: #fff;
@@ -480,6 +484,48 @@ section.login-form {
   background-color: #14A588;
   transition: background 0.2s linear;
   border-bottom: none; }
+
+.button-standard {
+  color: #2B3E50;
+  background-color: #eeeeee; }
+
+.button-standard:hover {
+  background-color: #DADADA; }
+
+.button-danger {
+  color: #fff;
+  background-color: #FF6262; }
+
+.button-danger:hover {
+  background-color: #FF4242; }
+
+.description {
+  background-color: #22313F;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: #fff; }
+  .description h2 {
+    font-weight: normal; }
+
+.comments {
+  background-color: #eeeeee;
+  border: 1px solid #DADADA;
+  padding: 1em; }
+  .comments .comment {
+    font-size: 13px;
+    background-color: #fff;
+    margin-bottom: 1em; }
+    .comments .comment .comment-title {
+      background-color: #DADADA;
+      padding: 0.2em; }
+      .comments .comment .comment-title h3 {
+        font-weight: normal;
+        font-size: 13px;
+        display: inline-block; }
+      .comments .comment .comment-title img {
+        padding-right: 0.3em; }
+      .comments .comment .comment-title span {
+        float: right; }
 
 * {
   margin: 0;
