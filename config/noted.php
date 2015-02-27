@@ -2,6 +2,6 @@
 
 return [
 
-    'site_title'    => 'Get Noted'
+    'site_title'    => 'ConvoLog'
 
 ];

@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace Convolog\Commands;
 
 abstract class Command {
 

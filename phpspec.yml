@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Convolog
+        psr4_prefix: Convolog
         src_path: app

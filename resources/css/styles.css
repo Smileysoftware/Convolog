@@ -1,9 +1,10 @@
 form.forms div {
   margin-bottom: 1em; }
-form.forms input[type=text], form.forms input[type=email], form.forms input[type=password] {
+form.forms input[type=text], form.forms input[type=email], form.forms input[type=password], form.forms textarea {
   line-height: 120%;
   padding: 0.5em;
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #DADADA; }
 form.forms input[type=submit], form.forms button {
   display: inline-block;
   background-color: #18BC9C;
@@ -34,6 +35,22 @@ section.login-form {
   .form-errors li {
     list-style-type: none; }
 
+.button {
+  text-transform: uppercase;
+  line-height: 3em;
+  width: 100%;
+  display: inline-block;
+  text-align: center; }
+
+.button-new {
+  color: #fff;
+  background-color: #18BC9C; }
+
+.button-new:hover {
+  background-color: #14A588;
+  transition: background 0.2s linear;
+  border-bottom: none; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -63,6 +80,8 @@ header {
       line-height: 80px;
       padding: 0 1em;
       display: inline-block; }
+    header strong a:hover {
+      border-bottom: none; }
   header nav {
     position: absolute;
     top: 1.2em;
@@ -118,6 +137,15 @@ body h1 {
   background-color: #eeeeee;
   border: 1px solid #DADADA;
   padding: 2em; }
+
+.advert-square {
+  color: #fff;
+  background-color: #22313F;
+  width: 100%;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  margin-bottom: 1em; }
 
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
-<?php namespace App\Services;
+<?php namespace Convolog\Services;
 
-use App\User;
+use Convolog\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

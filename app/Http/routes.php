@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', function(){
+  return 'Nothing to see here for a while';
+});
+
+Route::get('home', 'PagesController@home');
 
 
 Route::controllers([
@@ -20,4 +24,23 @@ Route::controllers([
 ]);
 
 
-Route::get( 'home', 'AppController@index' );
+/*
+|--------------------------------------------------------------------------
+| Authorised Routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['middleware' => 'auth'], function()
+{
+
+    Route::get( 'home', 'AppController@index' );
+
+    /*
+     * Conversations
+     */
+    Route::get( 'conversations' , [ 'as' => 'conversations' , 'uses' => 'ConversationController@index' ] );
+    Route::get( 'conversations/create', [ 'uses' => 'ConversationController@create' ] );
+    Route::post( 'conversations/create', 'ConversationController@store' );
+
+    Route::get( 'conversation/{id}' , [ 'uses' => 'ConversationController@show'] );
+
+});

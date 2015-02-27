@@ -23,9 +23,9 @@
 
         </section>
 
-        <section class="small-12 medium-4 large-4 columns">
+        <section class="small-12 medium-4 large-4 columns sidebar">
 
-            <a href="">Start a new conversation</a>
+            <a href="/conversations/create" class="button button-new">Start a new conversation</a>
 
         </section>
 

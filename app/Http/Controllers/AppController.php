@@ -1,13 +1,13 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Convolog\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Convolog\Http\Requests;
+use Convolog\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
 /**
  * Class AppController
- * @package App\Http\Controllers
+ * @package Convolog\Http\Controllers
  */
 class AppController extends Controller {
 
