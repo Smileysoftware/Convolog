@@ -24,31 +24,40 @@
             {{ $conversation->description }}
         </div>
 
-        @if ( $conversation->comments )
+        @if ( count( $conversation->comments ) > 0 )
 
-        <div class="comments">
+            <div class="comments">
 
-            @foreach( $conversation->comments as $comment )
+                @foreach( $conversation->comments as $comment )
 
-                <div class="comment">
-                    
-                    <div class="comment-title">
-                        <h3>
-                            <img src="/images/result/{{ $comment->result }}.svg" alt="Result"/> New Conversation Started
-                        </h3>
-                        <span>
-                            {{ $comment->created_at }}
-                        </span>
+                    <div class="comment">
+
+                        <div class="comment-title">
+                            <h3>
+                                <img src="/images/result/{{ $comment->result }}.svg" alt="Result"/> New Conversation Started
+                            </h3>
+                            <span>
+                                {{ $comment->created_at }}
+                            </span>
+                        </div>
+
+                        {{ $comment->comment }}
+
+
                     </div>
 
-                    {{ $comment->comment }}
-                    
+                @endforeach
 
-                </div>
+            </div>
 
-            @endforeach
+        @else
 
-        </div>
+            <div class="comments">
+
+                <h2>You have no comments yet</h2>
+                <p>Better comment about something!</p>
+
+            </div>
 
         @endif
 
