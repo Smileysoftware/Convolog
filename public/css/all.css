@@ -499,6 +499,11 @@ section.login-form {
 .button-danger:hover {
   background-color: #FF4242; }
 
+.button_view_conversation {
+  background-color: #18BC9C;
+  color: #fff;
+  margin-top: 2em; }
+
 .description {
   background-color: #22313F;
   margin-bottom: 1em;
@@ -506,6 +511,16 @@ section.login-form {
   color: #fff; }
   .description h2 {
     font-weight: normal; }
+
+.conversation {
+  background-color: #fff;
+  padding: 0.3em 0.6em;
+  margin-bottom: 1em;
+  position: relative; }
+  .conversation strong {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em; }
 
 .comments {
   background-color: #eeeeee;

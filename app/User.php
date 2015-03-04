@@ -8,6 +8,12 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
+    public function conversations(){
+
+        return $this->hasMany( '\Convolog\Conversation' );
+    }
+
+
 	use Authenticatable, CanResetPassword;
 
 	/**

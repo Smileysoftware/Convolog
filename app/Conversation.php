@@ -1,4 +1,4 @@
-<?php namespace Convolog\Models;
+<?php namespace Convolog;
 
 use Illuminate\Database\Eloquent\Model;
 use Auth;
@@ -6,12 +6,17 @@ use Auth;
 class Conversation extends Model {
 
 
+    public function user()
+    {
+        $this->belongsTo( 'Convolog\User' );
+    }
+    
     public function comments()
     {
-        return $this->hasMany('Convolog\Models\Comment');
+        return $this->hasMany( 'Convolog\Comment' );
     }
-
-
+    
+    
 	public static function store( $data )
 	{
 	    $c = new Conversation;

@@ -41,6 +41,6 @@ Route::group(['middleware' => 'auth'], function()
     Route::get( 'conversations/create', [ 'uses' => 'ConversationController@create' ] );
     Route::post( 'conversations/create', 'ConversationController@store' );
 
-    Route::get( 'conversation/{id}' , [ 'uses' => 'ConversationController@show'] );
+    Route::get( 'conversations/{id}' , [ 'uses' => 'ConversationController@show'] );
 
 });

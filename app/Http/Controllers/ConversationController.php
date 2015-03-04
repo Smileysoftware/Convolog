@@ -19,7 +19,12 @@ class ConversationController extends Controller {
 	 */
 	public function index()
 	{
-		return "hey";
+        //Fetch all the users conversations
+        $user = \Auth::user();
+
+        $conversations = $user->conversations()->orderby( 'updated_at' , 'desc' )->get();
+
+		return view( 'app.conversation.conversations' , compact( 'conversations' ) );
 	}
 
 	/**
@@ -41,7 +46,7 @@ class ConversationController extends Controller {
 	{
         $data = Request::all();
 
-        if ( $conversation_id =  Conversation::store( $data ) ){
+        if ( $conversation_id = Conversation::store( $data ) ){
 
             return Redirect::to( '/conversation/' . $conversation_id );
 
@@ -58,11 +63,15 @@ class ConversationController extends Controller {
 	 */
 	public function show($id)
 	{
-		if ( ! $data = Conversation::fetch_conversation( $id ) ) {
+        $user = \Auth::user();
+
+		if ( ! $data = $user->conversations()->with('comments')->find( $id ) ) {
 
             return Redirect::route( 'conversations' );
 
         }
+
+//        return $data;
 
         return view( 'app.conversation.show')->with( 'conversation' , $data );
 	}
