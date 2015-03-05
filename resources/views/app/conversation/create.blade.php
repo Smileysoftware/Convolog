@@ -26,6 +26,7 @@
             <p>
                 {!! Form::text('title',  old('title') ,  [ 'placeholder' => 'Calling to talk about my problem' ]  ) !!}
             </p>
+            <p class="duplicateRecord duplicateTitleField"></p>
         </div>
 
         <div>

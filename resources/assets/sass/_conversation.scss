@@ -50,6 +50,15 @@
   }
 }
 
+.duplicateRecord{
+  background-color: $red;
+  width: 100%;
+  padding: 0.3em 0.5em;
+  color: $white;
+  display: block;
+  display: none;
+}
+
 .comments{
   background-color: #eeeeee;
   border: 1px solid #DADADA;

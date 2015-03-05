@@ -570,6 +570,14 @@ input.edit-button:hover {
     top: 0.5em;
     right: 0.5em; }
 
+.duplicateRecord {
+  background-color: #FF6262;
+  width: 100%;
+  padding: 0.3em 0.5em;
+  color: #fff;
+  display: block;
+  display: none; }
+
 .comments {
   background-color: #eeeeee;
   border: 1px solid #DADADA;

@@ -43,4 +43,14 @@ Route::group(['middleware' => 'auth'], function()
 
     Route::get( 'conversations/{id}' , [ 'uses' => 'ConversationController@show'] );
 
+
+    /**
+     * Routes for the API section
+     */
+    Route::group(['prefix' => 'api'] , function(){
+
+        Route::post('conversation/slug' , [ 'uses' => 'ApiController@conversation_slug' ] );
+
+    });
+
 });

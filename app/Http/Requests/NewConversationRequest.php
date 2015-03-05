@@ -22,8 +22,10 @@ class NewConversationRequest extends Request {
 	public function rules()
 	{
 		return [
+            'title' => 'required',
 			'company' => 'required',
             'description' => 'required'
+
 		];
 
 	}
