@@ -8,6 +8,8 @@ use Request;
 use Redirect;
 
 use Convolog\Conversation;
+use Convolog\Comment;
+
 
 class ConversationController extends Controller {
 
@@ -37,12 +39,12 @@ class ConversationController extends Controller {
 		return view('app.conversation.create');
 	}
 
-	/**
-	 * Store a newly created conversation in the database.
-	 *
-	 * @return Response
-	 */
-	public function store( NewConversationRequest $request )
+
+    /**
+     * @param NewConversationRequest $request
+     * @return mixed
+     */
+    public function store( NewConversationRequest $request )
 	{
         $data = Request::all();
 
@@ -55,13 +57,12 @@ class ConversationController extends Controller {
         return Redirect::back()->withErrors('The Conversation could not be created');
 	}
 
-	/**
-	 * Display the specified conversation.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show( $slug )
+
+    /**
+     * @param $slug
+     * @return $this
+     */
+    public function show( $slug )
 	{
         $user = \Auth::user();
 
@@ -74,24 +75,32 @@ class ConversationController extends Controller {
         return view( 'app.conversation.show')->with( 'conversation' , $data );
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
+
+    /**
+     * @param $slug
+     * @return mixed
+     */
+    public function add_comment( $slug )
 	{
-		//
+
+        $user = \Auth::user();
+
+        $data = Request::except( '_token' );
+
+        $conversation = $user->conversations()->with('comments')->where( 'slug' , $slug )->first();
+
+        Comment::add_comment( $conversation , $data );
+
+        return Redirect::back()->with( 'notice-okay' , 'Comment added' );
+
+
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update()
+
+    /**
+     * @return mixed
+     */
+    public function update()
 	{
         $user = \Auth::user();
 

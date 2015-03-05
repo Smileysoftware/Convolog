@@ -1,8 +1,9 @@
 @import 'mixins';
 @import 'colours';
+@import 'fonts';
 @import 'forms';
 @import 'buttons';
-@import 'fonts';
+
 
 @import 'conversation';
 
@@ -123,9 +124,9 @@ body{
   margin: 0 auto;
   color: #fff;
   padding: 1em;
+  z-index: 100;
 }
 .notice-okay{
-
   background-color: $green;
 }
 .notice-bad{

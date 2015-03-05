@@ -6,18 +6,28 @@ use Auth;
 class Conversation extends Model {
 
 
+    /**
+     *
+     */
     public function user()
     {
         $this->belongsTo( 'Convolog\User' );
     }
-    
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function comments()
     {
         return $this->hasMany( 'Convolog\Comment' );
     }
-    
-    
-	public static function store( $data )
+
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public static function store( $data )
 	{
 	    $c = new Conversation;
 
@@ -34,6 +44,10 @@ class Conversation extends Model {
         return $c->id;
 	}
 
+    /**
+     * @param $data
+     * @return mixed|string
+     */
     public static function update_conversation( $data )
     {
         $c = Conversation::findOrFail( $data['id'] )->first();
@@ -50,6 +64,10 @@ class Conversation extends Model {
     }
 
 
+    /**
+     * @param $title
+     * @return mixed|string
+     */
     public static function generate_title_slug( $title )
     {
 
@@ -61,6 +79,10 @@ class Conversation extends Model {
     }
 
 
+    /**
+     * @param $conversation_id
+     * @return bool
+     */
     public static function fetch_conversation( $conversation_id )
     {
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{!! Config::get('noted.site_title') !!}</title>
+	<title>{!! Config::get('convolog.site_title') !!}</title>
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -47,6 +47,12 @@
     </section>
 
     @endif
+
+    <div class="black"></div>
+    <div class="comment_modal">
+        <a class="cancel-button" href="#">Cancel</a>
+        @yield('comment_modal')
+    </div>
 
 
 

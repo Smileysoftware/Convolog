@@ -73,7 +73,7 @@
 
                         <div class="comment-title">
                             <h3>
-                                <img src="/images/result/{{ $comment->result }}.svg" alt="Result"/> New Conversation Started
+                                blah
                             </h3>
                             <span>
                                 {{ $comment->created_at }}
@@ -104,7 +104,7 @@
 
     <section class="small-12 medium-4 large-4 columns sidebar">
 
-        <a href="/conversations/{{ $conversation->id }}/comment" class="button button-new">Add a comment</a>
+        <a href="#" class="button button-new add_comment">Add a comment</a>
         <a href="/conversations/create" class="button button-standard">Start a new conversation</a>
         <a href="/conversation/{{ $conversation->id }}/close" class="button button-standard">close this conversation</a>
         <a href="/conversations/{{ $conversation->id }}/email" class="button button-standard">email this conversation</a>
@@ -116,4 +116,8 @@
 
 </div>
 
+@endsection
+
+@section('comment_modal')
+    @include( 'partials.add_comment_form' )
 @endsection

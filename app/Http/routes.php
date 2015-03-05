@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function()
     Route::post( 'conversations/edit', 'ConversationController@update' );
 
     Route::get( 'conversations/{slug}' , [ 'uses' => 'ConversationController@show'] );
+    Route::post( 'conversations/{slug}' , [ 'uses' => 'ConversationController@add_comment'] );
 
 
     /**
