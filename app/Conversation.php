@@ -19,7 +19,7 @@ class Conversation extends Model {
      */
     public function comments()
     {
-        return $this->hasMany( 'Convolog\Comment' );
+        return $this->hasMany(Comment::class)->latest();
     }
 
 
