@@ -19,7 +19,7 @@
 
         <section class="small-12 medium-8 large-8 columns block">
 
-            @if ( isset( $conversations ) )
+            @if ( count( $conversations ) > 0 )
 
                 @foreach ( $conversations as $conversation )
 

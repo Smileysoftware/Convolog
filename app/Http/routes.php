@@ -32,14 +32,14 @@ Route::controllers([
 Route::group(['middleware' => 'auth'], function()
 {
 
-    Route::get( 'home', 'AppController@index' );
-
     /*
      * Conversations
      */
     Route::get( 'conversations' , [ 'as' => 'conversations' , 'uses' => 'ConversationController@index' ] );
     Route::get( 'conversations/create', [ 'uses' => 'ConversationController@create' ] );
     Route::post( 'conversations/create', 'ConversationController@store' );
+
+    Route::post( 'conversations/edit', 'ConversationController@update' );
 
     Route::get( 'conversations/{id}' , [ 'uses' => 'ConversationController@show'] );
 

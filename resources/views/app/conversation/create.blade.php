@@ -22,9 +22,16 @@
         {!! Form::open( [ 'url' => '/conversations/create' , 'class' => 'forms conversation-form' , 'novalidate' ] ) !!}
 
         <div>
+            {!! Form::label('title' , 'Give your conversation a title' ) !!}
+            <p>
+                {!! Form::text('title',  old('title') ,  [ 'placeholder' => 'Calling to talk about my problem' ]  ) !!}
+            </p>
+        </div>
+
+        <div>
             {!! Form::label('company' , 'Enter the name of the company you\'re talking to' ) !!}
             <p>
-                {!! Form::text('company',  old('company')  ) !!}
+                {!! Form::text('company',  old('company') , [ 'placeholder' => 'A & B Pots and Pans' ]  ) !!}
             </p>
         </div>
 

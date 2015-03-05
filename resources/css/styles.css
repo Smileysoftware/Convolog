@@ -41,7 +41,8 @@ section.login-form {
   width: 100%;
   display: inline-block;
   text-align: center;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  border: none; }
 
 .button:hover {
   border-bottom: none; }
@@ -51,6 +52,30 @@ section.login-form {
   background-color: #18BC9C; }
 
 .button-new:hover {
+  background-color: #14A588;
+  transition: background 0.2s linear;
+  border-bottom: none; }
+
+input.edit-button {
+  border: none;
+  text-transform: uppercase;
+  background-color: #18BC9C;
+  color: #fff;
+  padding: 0.3em; }
+
+input.edit-button:hover {
+  background-color: #14A588;
+  transition: background 0.2s linear;
+  border-bottom: none; }
+
+.cancel-button {
+  border: none;
+  text-transform: uppercase;
+  background-color: #18BC9C;
+  color: #fff;
+  padding: 0.3em; }
+
+.cancel-button:hover {
   background-color: #14A588;
   transition: background 0.2s linear;
   border-bottom: none; }
@@ -74,11 +99,34 @@ section.login-form {
   color: #fff;
   margin-top: 2em; }
 
+.conversation-edit {
+  display: none; }
+  .conversation-edit form {
+    background-color: #eeeeee;
+    border: 1px solid #DADADA;
+    padding: 1em;
+    margin-bottom: 1em;
+    position: relative; }
+    .conversation-edit form input[type=text], .conversation-edit form textarea {
+      width: 100%;
+      border: 1px solid #DADADA;
+      padding: 0.5em; }
+    .conversation-edit form a.cancel-button {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      font-size: 12px; }
+
 .description {
   background-color: #22313F;
   margin-bottom: 1em;
   padding: 1em;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
+  .description p {
+    text-align: right; }
+    .description p input.edit-button {
+      font-size: 12px; }
   .description h2 {
     font-weight: normal; }
 
@@ -207,6 +255,20 @@ body h1 {
   line-height: 300px;
   text-align: center;
   margin-bottom: 1em; }
+
+.notices {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  margin: 0 auto;
+  color: #fff;
+  padding: 1em; }
+
+.notice-okay {
+  background-color: #18BC9C; }
+
+.notice-bad {
+  background-color: #FF6262; }
 
 
 /*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,7 @@
   display: inline-block;
   text-align: center;
   margin-bottom: 1em;
+  border: none;
 }
 .button:hover{
   border-bottom: none;
@@ -15,6 +16,30 @@
   background-color: $green;
 }
 .button-new:hover{
+  background-color: $darkgreen;
+  @include button-hovers();
+  border-bottom: none;
+}
+
+input.edit-button{
+  @include buttons();
+  background-color: $green;
+  color: $white;
+  padding: 0.3em;
+}
+input.edit-button:hover{
+  background-color: $darkgreen;
+  @include button-hovers();
+  border-bottom: none;
+}
+
+.cancel-button{
+  @include buttons();
+  background-color: $green;
+  color: $white;
+  padding: 0.3em;
+}
+.cancel-button:hover{
   background-color: $darkgreen;
   @include button-hovers();
   border-bottom: none;

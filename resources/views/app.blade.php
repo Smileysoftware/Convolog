@@ -23,6 +23,8 @@
 
     <body>
 
+
+
         <section class="container">
             @yield('content')
         </section>
@@ -30,10 +32,26 @@
     </body>
 
 
+    @if ( Session::has('notice-okay') )
+
+    <section class="notice-okay notices">
+        {{ Session::get('notice-okay') }}
+    </section>
+
+    @endif
+
+    @if ( Session::has('notice-bad') )
+
+    <section class="notice-bad notices">
+        {{ Session::get('notice-bad') }}
+    </section>
+
+    @endif
 
 
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

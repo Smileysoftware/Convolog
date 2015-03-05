@@ -7,7 +7,7 @@ use Convolog\Http\Controllers\Controller;
 use Request;
 use Redirect;
 
-use Convolog\Models\Conversation as Conversation;
+use Convolog\Conversation;
 
 class ConversationController extends Controller {
 
@@ -48,7 +48,7 @@ class ConversationController extends Controller {
 
         if ( $conversation_id = Conversation::store( $data ) ){
 
-            return Redirect::to( '/conversation/' . $conversation_id );
+            return Redirect::to( '/conversations/' . $conversation_id );
 
         }
 
@@ -71,8 +71,6 @@ class ConversationController extends Controller {
 
         }
 
-//        return $data;
-
         return view( 'app.conversation.show')->with( 'conversation' , $data );
 	}
 
@@ -93,9 +91,19 @@ class ConversationController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{
-		//
+        $user = \Auth::user();
+
+        $data = Request::all();
+
+        if ( Conversation::update_conversation( $data ) ){
+
+            return Redirect::back()->with( 'notice-okay' , 'Conversation was updated' );
+
+        }
+
+        return Redirect::back()->with( 'notice-bad' , 'Could not edit the conversation' );
 	}
 
 	/**

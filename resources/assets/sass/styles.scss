@@ -2,7 +2,10 @@
 @import 'colours';
 @import 'forms';
 @import 'buttons';
+@import 'fonts';
+
 @import 'conversation';
+
 
 *{
   margin: 0;
@@ -111,4 +114,20 @@ body{
   line-height: 300px;
   text-align: center;
   margin-bottom: 1em;
+}
+
+.notices{
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  margin: 0 auto;
+  color: #fff;
+  padding: 1em;
+}
+.notice-okay{
+
+  background-color: $green;
+}
+.notice-bad{
+  background-color: $red;
 }

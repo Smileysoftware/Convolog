@@ -23,6 +23,9 @@ class Conversation extends Model {
 
         $c->user_id = Auth::user()->id;
 
+        $c->title = $data['title'];
+        $c->slug = Conversation::generate_title_slug( $data['title'] );
+
         $c->company = $data['company'];
         $c->description = $data['description'];
 
@@ -30,6 +33,32 @@ class Conversation extends Model {
 
         return $c->id;
 	}
+
+    public static function update_conversation( $data )
+    {
+        $c = Conversation::findOrFail( $data['id'] )->first();
+
+        $c->title = $data['title'];
+        $c->slug = Conversation::generate_title_slug( $data['title'] );
+
+        $c->company = $data['company'];
+        $c->description = $data['description'];
+
+        $c->save();
+
+        return $c->id;
+    }
+
+
+    public static function generate_title_slug( $title )
+    {
+
+        $slug = strtolower( $title );
+        $slug = str_replace( ' ' , '-' , $slug );
+
+        return $slug;
+
+    }
 
 
     public static function fetch_conversation( $conversation_id )

@@ -26,3 +26,8 @@
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
+
+@mixin buttons() {
+  border: none;
+  text-transform: uppercase;
+}
