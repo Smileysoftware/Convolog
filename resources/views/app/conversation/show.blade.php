@@ -31,7 +31,7 @@
 
             {!! Form::hidden('id',  $conversation->id   ) !!}
 
-            <a class="cancel-button" href="#">Cancel</a>
+            <p><a class="cancel-button" href="#">Cancel</a></p>
 
             <div>
                 {!! Form::label('title' , 'Edit the title' ) !!}

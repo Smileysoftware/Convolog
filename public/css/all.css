@@ -1,54 +1,49 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
-  margin: 0;
-}
+  font-family: 'Montserrat', sans-serif; }
 
-/* HTML5 display definitions
-   ========================================================================== */
+a {
+  text-decoration: none; }
+  a img {
+    border: none; }
 
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
+header {
+  background: #2B3E50;
+  color: #fff;
+  position: relative;
+  height: 80px; }
+  header strong {
+    font-weight: normal;
+    font-size: 35px; }
+    header strong a {
+      color: #fff;
+      line-height: 80px;
+      padding: 0 1em;
+      display: inline-block; }
+  header nav {
+    position: absolute;
+    top: 1.2em;
+    right: 1em; }
+    header nav ul li {
+      display: inline-block; }
+      header nav ul li a {
+        color: #fff;
+        background-color: #22313F;
+        display: inline-block;
+        padding: 1em;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 100;
+        margin-left: 0.5em; }
+      header nav ul li a:hover {
+        background-color: #18BC9C; }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
 
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=all.css.map */ze vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
 audio,
@@ -578,11 +573,10 @@ input.edit-button:hover {
       width: 100%;
       border: 1px solid #DADADA;
       padding: 0.5em; }
-    .conversation-edit form a.cancel-button {
-      position: absolute;
-      top: 0.5em;
-      right: 0.5em;
-      font-size: 12px; }
+    .conversation-edit form p {
+      text-align: right; }
+      .conversation-edit form p a.cancel-button {
+        font-size: 12px; }
 
 .description {
   background-color: #22313F;

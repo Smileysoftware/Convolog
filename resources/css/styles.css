@@ -148,11 +148,10 @@ input.edit-button:hover {
       width: 100%;
       border: 1px solid #DADADA;
       padding: 0.5em; }
-    .conversation-edit form a.cancel-button {
-      position: absolute;
-      top: 0.5em;
-      right: 0.5em;
-      font-size: 12px; }
+    .conversation-edit form p {
+      text-align: right; }
+      .conversation-edit form p a.cancel-button {
+        font-size: 12px; }
 
 .description {
   background-color: #22313F;
