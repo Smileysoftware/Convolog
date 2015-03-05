@@ -147,7 +147,8 @@ input.edit-button:hover {
     .conversation-edit form input[type=text], .conversation-edit form textarea {
       width: 100%;
       border: 1px solid #DADADA;
-      padding: 0.5em; }
+      padding: 0.5em;
+      margin-bottom: 1em; }
     .conversation-edit form p {
       text-align: right; }
       .conversation-edit form p a.cancel-button {
