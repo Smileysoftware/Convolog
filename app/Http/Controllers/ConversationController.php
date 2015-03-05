@@ -10,6 +10,8 @@ use Redirect;
 use Convolog\Conversation;
 use Convolog\Comment;
 
+use Config;
+
 
 class ConversationController extends Controller {
 
@@ -66,13 +68,15 @@ class ConversationController extends Controller {
 	{
         $user = \Auth::user();
 
+        $comment_types = Config::get('convolog.comment_types');
+
 		if ( ! $data = $user->conversations()->with('comments')->where( 'slug' , $slug )->first() ) {
 
             return Redirect::route( 'conversations' );
 
         }
 
-        return view( 'app.conversation.show')->with( 'conversation' , $data );
+        return view( 'app.conversation.show')->with( 'conversation' , $data )->with( 'comment_types' , $comment_types );
 	}
 
 

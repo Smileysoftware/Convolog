@@ -25,43 +25,7 @@
             <p><input type="button" value="Edit" class="edit-button"/></p>
         </div>
 
-        <div class="conversation-edit">
-
-            {!! Form::open( [ 'action' => 'ConversationController@update' ] ) !!}
-
-            {!! Form::hidden('id',  $conversation->id   ) !!}
-
-            <p><a class="cancel-button" href="#">Cancel</a></p>
-
-            <div>
-                {!! Form::label('title' , 'Edit the title' ) !!}
-                <p>
-                    {!! Form::text('title',  $conversation->title   ) !!}
-                </p>
-            </div>
-
-            <div>
-                {!! Form::label('company' , 'Change the company you\'re talking to' ) !!}
-                <p>
-                    {!! Form::text('company',  $conversation->company ) !!}
-                </p>
-            </div>
-
-            <div>
-                {!! Form::label('description' , 'Give a brief description of the matter in hand' ) !!}
-                <p>
-                    {!! Form::textarea( 'description' , $conversation->description ) !!}
-                </p>
-            </div>
-
-            <div>
-                {!! Form::submit( 'Update Conversation' , [ 'class' => 'button button-new' ] ) !!}
-            </div>
-
-            {!! Form::close() !!}
-
-
-        </div>
+        @include( 'app.conversation.partials.edit_conversation_form ' )
 
         @if ( count( $conversation->comments ) > 0 )
 
@@ -73,15 +37,20 @@
 
                         <div class="comment-title">
                             <h3>
-                                blah
+                                {{ $comment_types[ $comment->comment_type ] }}
                             </h3>
                             <span>
                                 {{ $comment->created_at }}
                             </span>
                         </div>
 
-                        {{ $comment->comment }}
+                        <div class="comment-body">
+                            {{ $comment->comment }}
 
+                            @if ( $comment->person )
+                                <p class="person">Spoke to <strong>{{ $comment->person }}</strong></p>
+                            @endif
+                        </div>
 
                     </div>
 
@@ -119,5 +88,5 @@
 @endsection
 
 @section('comment_modal')
-    @include( 'partials.add_comment_form' )
+    @include( 'app.conversation.partials.add_comment_form' )
 @endsection

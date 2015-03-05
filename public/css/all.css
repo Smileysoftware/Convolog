@@ -625,7 +625,7 @@ input.edit-button:hover {
     margin-bottom: 1em; }
     .comments .comment .comment-title {
       background-color: #DADADA;
-      padding: 0.2em; }
+      padding: 0.2em 0.5em; }
       .comments .comment .comment-title h3 {
         font-weight: normal;
         font-size: 13px;
@@ -634,6 +634,10 @@ input.edit-button:hover {
         padding-right: 0.3em; }
       .comments .comment .comment-title span {
         float: right; }
+    .comments .comment .comment-body {
+      padding: 1em; }
+      .comments .comment .comment-body .person {
+        text-align: right; }
 
 * {
   margin: 0;
