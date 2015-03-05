@@ -27,7 +27,7 @@
                         <h2>{{ $conversation->company }}</h2>
                         <strong>Last update {{ $conversation->updated_at }}</strong>
                         <p>{{ $conversation->description }}</p>
-                        <a href="/conversations/{{ $conversation->id }}" class="button button_view_conversation">View</a>
+                        <a href="/conversations/{{ $conversation->slug }}" class="button button_view_conversation">View</a>
                     </div>
 
                 @endforeach

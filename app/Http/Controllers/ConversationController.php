@@ -61,11 +61,11 @@ class ConversationController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show( $slug )
 	{
         $user = \Auth::user();
 
-		if ( ! $data = $user->conversations()->with('comments')->find( $id ) ) {
+		if ( ! $data = $user->conversations()->with('comments')->where( 'slug' , $slug )->first() ) {
 
             return Redirect::route( 'conversations' );
 
@@ -97,9 +97,9 @@ class ConversationController extends Controller {
 
         $data = Request::all();
 
-        if ( Conversation::update_conversation( $data ) ){
+        if ( $slug = Conversation::update_conversation( $data ) ){
 
-            return Redirect::back()->with( 'notice-okay' , 'Conversation was updated' );
+            return Redirect::to( '/conversations/'. $slug )->with( 'notice-okay' , 'Conversation was updated' );
 
         }
 

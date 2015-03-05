@@ -46,7 +46,7 @@ class Conversation extends Model {
 
         $c->save();
 
-        return $c->id;
+        return $c->slug;
     }
 
 
