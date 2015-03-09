@@ -16,7 +16,7 @@ class ApiController extends Controller {
         $slug = Conversation::generate_title_slug( $title );
 
         //Count the number of records
-        $count = Conversation::where( 'slug' , $slug )->count();
+        $count = Conversation::where( 'slug' , $slug )->where( 'user_id' , \Auth::User()->id )->count();
 
         return $count;
 	}
