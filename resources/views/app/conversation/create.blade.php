@@ -45,7 +45,7 @@
 
 
         <div>
-            {!! Form::submit( 'Start new Conversation' ) !!}
+            {!! Form::submit( 'Save this Conversation' ) !!}
         </div>
 
 

@@ -10,6 +10,8 @@
 
         <h1>{{ $conversation->title }}</h1>
 
+        <h3>Company: {{ $conversation->company }}</h3>
+
     </section>
 
 </div>

@@ -24,8 +24,9 @@
                 @foreach ( $conversations as $conversation )
 
                     <div class="conversation">
-                        <h2>{{ $conversation->company }}</h2>
+                        <h2>{{ $conversation->title }}</h2>
                         <strong>Last update {{ $conversation->updated_at }}</strong>
+                        <h3>{{ $conversation->company }}</h3>
                         <p>{{ $conversation->description }}</p>
                         <a href="/conversations/{{ $conversation->slug }}" class="button button_view_conversation">View</a>
                     </div>
