@@ -48,6 +48,8 @@
 
             <a href="/conversations/create" class="button button-new">Start a new conversation</a>
 
+            @include( 'partials.ad_block' )
+
         </section>
 
     </div>

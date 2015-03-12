@@ -81,7 +81,7 @@
         <a href="/conversations/{{ $conversation->id }}/email" class="button button-standard">email this conversation</a>
         <a href="/conversations/{{ $conversation->id }}/delete" class="button button-danger">delete this conversation</a>
 
-        @include( 'partials.add_block' )
+        @include( 'partials.ad_block' )
 
     </section>
 

@@ -11,5 +11,10 @@ class PagesController extends Controller {
 	{
 	    return View('home');
 	}
+    
+    public function advertise()
+    {
+        return view('advertise');
+    }
 
 }

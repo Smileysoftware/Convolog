@@ -23,14 +23,12 @@ a{
   }
 }
 a:hover{
-  border-bottom: 2px solid $green;
+//  border-bottom: 2px solid $green;
 }
 
 header{
   background: $blue;
   color: #fff;
-  position: relative;
-  height: 80px;
   strong{
     font-weight: normal;
     font-size: 35px;
@@ -45,9 +43,9 @@ header{
     }
   }
   nav{
-    position: absolute;
+    text-align: right;
+    position: relative;
     top: 1.2em;
-    right: 1em;
     ul{
       li{
         display: inline-block;
@@ -67,6 +65,17 @@ header{
       }
     }
   }
+}
+
+
+@media only screen and (max-width: 40em) {
+
+  header{
+    nav{
+      top: -3em;
+    }
+  }
+
 }
 
 body{
@@ -115,6 +124,24 @@ body{
   line-height: 300px;
   text-align: center;
   margin-bottom: 1em;
+}
+
+.advert-interest{
+
+  background-color: $green;
+  width: 100%;
+
+  margin-bottom: 1em;
+
+  a{
+    text-align: center;
+    color: $white;
+    display: inline-block;
+    padding: 1em;
+  }
+  a:hover{
+    border-bottom: none;
+  }
 }
 
 .notices{

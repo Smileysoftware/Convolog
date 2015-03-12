@@ -502,6 +502,20 @@ section.login-form {
     margin-top: 1em;
     display: none; }
 
+.advertise p {
+  margin-bottom: 1em; }
+
+.advertise-form form {
+  background-color: #eeeeee;
+  border: 1px solid #DADADA;
+  padding: 1em; }
+  .advertise-form form input, .advertise-form form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #DADADA;
+    margin-bottom: 1em; }
+
 .button {
   text-transform: uppercase;
   line-height: 3em;
@@ -652,14 +666,9 @@ a {
   a img {
     border: none; }
 
-a:hover {
-  border-bottom: 2px solid #18BC9C; }
-
 header {
   background: #2B3E50;
-  color: #fff;
-  position: relative;
-  height: 80px; }
+  color: #fff; }
   header strong {
     font-weight: normal;
     font-size: 35px; }
@@ -671,9 +680,9 @@ header {
     header strong a:hover {
       border-bottom: none; }
   header nav {
-    position: absolute;
-    top: 1.2em;
-    right: 1em; }
+    text-align: right;
+    position: relative;
+    top: 1.2em; }
     header nav ul li {
       display: inline-block; }
       header nav ul li a {
@@ -687,6 +696,10 @@ header {
         margin-left: 0.5em; }
       header nav ul li a:hover {
         background-color: #18BC9C; }
+
+@media only screen and (max-width: 40em) {
+  header nav {
+    top: -3em; } }
 
 body h1 {
   text-transform: uppercase;
@@ -734,6 +747,18 @@ body h1 {
   line-height: 300px;
   text-align: center;
   margin-bottom: 1em; }
+
+.advert-interest {
+  background-color: #18BC9C;
+  width: 100%;
+  margin-bottom: 1em; }
+  .advert-interest a {
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    padding: 1em; }
+  .advert-interest a:hover {
+    border-bottom: none; }
 
 .notices {
   position: absolute;
