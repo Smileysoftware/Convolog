@@ -17,7 +17,17 @@ Route::get('/', function(){
 
 Route::get('home', 'PagesController@home');
 
-Route::get('advertise' , 'PagesController@advertise');
+/*
+ * Contact routes
+ */
+Route::get('contact', 'PagesController@contact');
+Route::post('contact', 'PagesController@contact_method');
+
+/*
+ * Advertisers routes
+ */
+Route::get('advertisers' , 'PagesController@advertisers');
+Route::post('advertisers' , 'PagesController@advertisers_method');
 
 
 Route::controllers([

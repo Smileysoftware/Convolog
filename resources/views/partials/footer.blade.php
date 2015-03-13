@@ -10,7 +10,7 @@
 
             <section class="small-12 medium-6 large-6 columns">
 
-                <a class="button button-new" href="/contact">Contact Us</a>
+                <a class="button button-new" href="/contact">Contact Me</a>
 
             </section>
 
@@ -23,7 +23,7 @@
 
         <section class="row">
 
-            <p>&copy; Copyright The Elemental Web {{date('Y') }}</p>
+            <p>&copy; Copyright The Elemental Web {{ date('Y') }}</p>
 
         </section>
 

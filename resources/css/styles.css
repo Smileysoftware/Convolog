@@ -341,10 +341,7 @@ body h1 {
 
 footer {
   color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 100px; }
+  margin-top: 2em; }
   footer .footer-social {
     background-color: #2B3E50;
     padding: 2em 0; }

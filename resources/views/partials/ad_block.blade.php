@@ -13,5 +13,5 @@
 </div>
 
 <div class="advert-interest">
-    <a href="/advertise">Would you like to advertise here?</a>
+    <a href="/advertisers">Would you like to advertise here?</a>
 </div>

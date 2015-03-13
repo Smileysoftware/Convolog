@@ -57,7 +57,7 @@
 
     <section class="small-12 medium-4 large-4 columns sidebar">
 
-        @include( 'partials.add_block' )
+        @include( 'partials.ad_block' )
 
     </section>
 
