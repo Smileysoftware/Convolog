@@ -1,4 +1,4 @@
-@extends('site')
+@extends('app')
 
 @section('content')
 
@@ -20,7 +20,15 @@
                     ConvoLog was designed for you to log your experiences with the myriad of companies you need to deal with on a daily basis.
                 </p>
 
-                <a href="/auth/register" class="button-ghost">Register Now It's Free Forever!</a>
+                @if ( Auth::guest() )
+
+                    <a href="/auth/register" class="button-ghost">Register Now It's Free Forever!</a>
+
+                @else
+
+                <br/><h3>You've already registered, I love you a little bit.</h3>
+
+                @endif
 
             </section>
 

@@ -45,8 +45,7 @@ class PagesController extends Controller {
         $data = $request->all();
 
         $mailer->send( $data );
-
-        return Redirect::back()->withSuccess( 'Your message was sent' );
+        return \Redirect::back()->with( 'notice-okay' , 'Your message was sent' );
     }
 
     /**
@@ -72,6 +71,6 @@ class PagesController extends Controller {
 
         $mailer->send( $data );
 
-        return Redirect::back()->withSuccess( 'Your message was sent' );
+        return \Redirect::back()->with( 'notice-okay' , 'Your message was sent' );
     }
 }

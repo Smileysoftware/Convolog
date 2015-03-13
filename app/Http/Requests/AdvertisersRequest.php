@@ -23,7 +23,7 @@ class AdvertisersRequest extends Request {
 	{
 		return [
 			'name'      => 'required',
-            'email'     => 'require|email',
+            'email'     => 'required|email',
             'company'   => 'required',
             'talk'      => 'required',
 		];
