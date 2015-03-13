@@ -1,3 +1,11 @@
 /vendor
 /node_modules
 .env
+
+.htaccess
+live.env
+
+public/public-html
+public_html
+
+.lesshst
