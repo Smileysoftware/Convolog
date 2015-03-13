@@ -29,7 +29,9 @@
             @yield('content')
         </section>
 
-    </body>
+        @include('partials.footer')
+
+
 
 
     @if ( Session::has('notice-okay') )
@@ -55,6 +57,7 @@
     </div>
 
 
+    </body>
 
 
 	<!-- Scripts -->
