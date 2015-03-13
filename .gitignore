@@ -1,3 +1,6 @@
 /vendor
-/node_modules
+/node-modules
 .env
+
+.bash_history
+.ssh
