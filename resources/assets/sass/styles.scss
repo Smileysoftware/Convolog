@@ -90,26 +90,10 @@ body{
   background-color: $green;
   color: $white;
   padding: 3em 0;
-  text-align: center;
   p{
-    font-size: 75px;
-
-    @include white-seperator();
-
+    font-size: 15px;
   }
 
-  span{
-    display: block;
-    font-size: 45px;
-
-    @include white-seperator();
-
-  }
-  strong{
-    display: block;
-    font-size: 80px;
-    font-weight: normal;
-  }
 }
 
 
@@ -158,4 +142,22 @@ body{
 }
 .notice-bad{
   background-color: $red;
+}
+
+
+footer{
+  color: $white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
+
+  .footer-social{
+    background-color: $blue;
+    padding: 2em 0;
+  }
+  .footer-bottom{
+    background-color: $darkblue;
+    padding: 2em 0;
+  }
 }

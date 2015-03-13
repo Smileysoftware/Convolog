@@ -107,6 +107,22 @@ section.login-form {
   transition: background 0.2s linear;
   border-bottom: none; }
 
+.button-ghost {
+  color: #fff;
+  background-color: #18BC9C;
+  border: 1px solid #fff;
+  text-align: center;
+  width: 80%;
+  display: inline-block;
+  padding: 1em 0;
+  margin-left: 10%;
+  margin-top: 1em; }
+
+.button-ghost:hover {
+  background-color: #14A588;
+  transition: background 0.2s linear;
+  border: 1px solid #18BC9C; }
+
 input.edit-button {
   border: none;
   text-transform: uppercase;
@@ -278,31 +294,9 @@ body h1 {
 .big-block {
   background-color: #18BC9C;
   color: #fff;
-  padding: 3em 0;
-  text-align: center; }
+  padding: 3em 0; }
   .big-block p {
-    font-size: 75px; }
-    .big-block p:after {
-      content: "";
-      width: 315px;
-      height: 40px;
-      display: block;
-      background: url('../images/white-seperator.svg') no-repeat;
-      margin: 0.3em auto; }
-  .big-block span {
-    display: block;
-    font-size: 45px; }
-    .big-block span:after {
-      content: "";
-      width: 315px;
-      height: 40px;
-      display: block;
-      background: url('../images/white-seperator.svg') no-repeat;
-      margin: 0.3em auto; }
-  .big-block strong {
-    display: block;
-    font-size: 80px;
-    font-weight: normal; }
+    font-size: 15px; }
 
 .block {
   background-color: #eeeeee;
@@ -344,6 +338,19 @@ body h1 {
 
 .notice-bad {
   background-color: #FF6262; }
+
+footer {
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px; }
+  footer .footer-social {
+    background-color: #2B3E50;
+    padding: 2em 0; }
+  footer .footer-bottom {
+    background-color: #22313F;
+    padding: 2em 0; }
 
 
 /*# sourceMappingURL=styles.css.map */

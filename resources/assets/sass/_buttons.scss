@@ -21,6 +21,23 @@
   border-bottom: none;
 }
 
+.button-ghost{
+  color: $white;
+  background-color: $green;
+  border: 1px solid $white;
+  text-align: center;
+  width: 80%;
+  display: inline-block;
+  padding: 1em 0;
+  margin-left: 10%;
+  margin-top: 1em;
+}
+.button-ghost:hover{
+  background-color: $darkgreen;
+  @include button-hovers();
+  border: 1px solid $green;
+}
+
 input.edit-button{
   @include buttons();
   background-color: $green;

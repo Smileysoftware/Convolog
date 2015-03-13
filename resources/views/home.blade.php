@@ -4,11 +4,28 @@
 
     <section class="big-block">
 
-        <p>Never miss a trick</p>
+        <section class="row">
 
-        <span>Never forget who said what</span>
+            <section class="small-12 medium-6 large-6 columns">
 
-        <strong>Get Noted</strong>
+                <h1>Don't loose it, log it!</h1>
+
+                <h2>Never forget who you spoke to or what was said ever again!</h2>
+
+            </section>
+
+            <section class="small-12 medium-6 large-6 columns">
+
+                <p>
+                    ConvoLog was designed for you to log your experiences with the myriad of companies you need to deal with on a daily basis.
+                </p>
+
+                <a href="/auth/register" class="button-ghost">Register Now It's Free Forever!</a>
+
+            </section>
+
+        </section>
+
 
     </section>
 
