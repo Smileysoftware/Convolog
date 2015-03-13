@@ -9,3 +9,6 @@ public/public-html
 public_html
 
 .lesshst
+
+.bash_history
+.ssh
