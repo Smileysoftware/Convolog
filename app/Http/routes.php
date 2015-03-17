@@ -38,9 +38,6 @@ Route::controllers([
 
 Route::get('bum', function(){
 
-    throw new Exception( 'CustomException' );
-    return "bum";
-
 });
 
 

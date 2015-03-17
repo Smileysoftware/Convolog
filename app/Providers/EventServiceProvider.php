@@ -6,6 +6,9 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Convolog\Events\UserRegistered;
 use Convolog\Handlers\Events\NotifyOfNewUser;
 
+use Convolog\Events\UserLogin;
+use Convolog\Handlers\Events\NotifyOfUserLogin;
+
 class EventServiceProvider extends ServiceProvider {
 
 	/**
@@ -20,6 +23,10 @@ class EventServiceProvider extends ServiceProvider {
 
         UserRegistered::class => [
             NotifyOfNewUser::class,
+        ],
+
+        UserLogin::class => [
+            NotifyOfUserLogin::class,
         ]
 
 	];
