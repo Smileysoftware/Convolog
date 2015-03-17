@@ -3,6 +3,9 @@
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
+use Convolog\Events\UserRegistered;
+use Convolog\Handlers\Events\NotifyOfNewUser;
+
 class EventServiceProvider extends ServiceProvider {
 
 	/**
@@ -11,9 +14,14 @@ class EventServiceProvider extends ServiceProvider {
 	 * @var array
 	 */
 	protected $listen = [
-		'event.name' => [
-			'EventListener',
-		],
+        'event.name' => [
+            'EventListener',
+        ],
+
+        UserRegistered::class => [
+            NotifyOfNewUser::class,
+        ]
+
 	];
 
 	/**
