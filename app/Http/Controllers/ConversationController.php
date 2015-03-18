@@ -127,6 +127,6 @@ class ConversationController extends Controller {
 
         return Redirect::back()->with( 'notice-bad' , 'Could not edit the conversation' );
 	}
- 
+
 
 }

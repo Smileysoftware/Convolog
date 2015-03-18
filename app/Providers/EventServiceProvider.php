@@ -21,9 +21,9 @@ class EventServiceProvider extends ServiceProvider {
             'EventListener',
         ],
 
-        UserRegistered::class => [
-            NotifyOfNewUser::class,
-        ],
+//        UserRegistered::class => [
+//            NotifyOfNewUser::class,
+//        ],
 
 	];
 
