@@ -30,6 +30,7 @@
         {!! Form::label('company' , 'The company name' ) !!}
         <div class="add_company">
 
+            @if ( count( $companies ) > 0 )
             <p>
                 Please choose the company name if it already exists
             </p>
@@ -39,6 +40,11 @@
 
             <p>
                 Or add a new company
+            </p>
+
+            @endif
+            <p>
+                Add a new company
             </p>
             <p>
                 {!! Form::text('company_new',  old('company') , [ 'placeholder' => 'A & B Pots and Pans' ]  ) !!}
