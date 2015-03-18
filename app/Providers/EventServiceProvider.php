@@ -25,10 +25,6 @@ class EventServiceProvider extends ServiceProvider {
             NotifyOfNewUser::class,
         ],
 
-        UserLogin::class => [
-            NotifyOfUserLogin::class,
-        ]
-
 	];
 
 	/**
