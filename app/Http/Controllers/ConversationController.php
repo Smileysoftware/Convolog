@@ -9,6 +9,7 @@ use Redirect;
 
 use Convolog\Conversation;
 use Convolog\Comment;
+use Convolog\Company;
 
 use Config;
 
@@ -38,7 +39,10 @@ class ConversationController extends Controller {
 	 */
 	public function create()
 	{
-		return view('app.conversation.create');
+        //Fetch a list of all companies
+        $companies = Company::fetch_all_in_a_list();
+
+		return view('app.conversation.create' , compact( 'companies' ));
 	}
 
 
@@ -49,6 +53,9 @@ class ConversationController extends Controller {
     public function store( NewConversationRequest $request )
 	{
         $data = Request::all();
+
+        //Something clever here to sort out the company ID
+        $data['company_id'] = Company::create_new_or_user_existing( $data );
 
         if ( $conversation_id = Conversation::store( $data ) ){
 
@@ -70,13 +77,15 @@ class ConversationController extends Controller {
 
         $comment_types = Config::get('convolog.comment_types');
 
-		if ( ! $data = $user->conversations()->with('comments')->where( 'slug' , $slug )->first() ) {
+		if ( ! $data = Conversation::fetch_conversation( $slug ) ) {
 
             return Redirect::route( 'conversations' );
 
         }
 
-        return view( 'app.conversation.show')->with( 'conversation' , $data )->with( 'comment_types' , $comment_types );
+        return view( 'app.conversation.show')
+            ->with( 'conversation' , $data )
+            ->with( 'comment_types' , $comment_types );
 	}
 
 
@@ -118,16 +127,6 @@ class ConversationController extends Controller {
 
         return Redirect::back()->with( 'notice-bad' , 'Could not edit the conversation' );
 	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+ 
 
 }

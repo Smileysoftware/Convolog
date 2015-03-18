@@ -36,7 +36,7 @@ class Conversation extends Model {
         $c->title = $data['title'];
         $c->slug = Conversation::generate_title_slug( $data['title'] );
 
-        $c->company = $data['company'];
+        $c->company_id = $data['company_id'];
         $c->description = $data['description'];
 
         $c->save();
@@ -83,12 +83,14 @@ class Conversation extends Model {
      * @param $conversation_id
      * @return bool
      */
-    public static function fetch_conversation( $conversation_id )
+    public static function fetch_conversation( $slug )
     {
 
-        $user_id = Auth::user()->id;
+        $user = Auth::user();
 
-        $data = Conversation::where( 'user_id' , $user_id )->where( 'id' , $conversation_id )->with('comments')->first();
+        $data = $user->conversations()->with('comments')->where( 'slug' , $slug )->first();
+
+        $data['company'] = Company::find_company_name( $data['company_id' ]);
 
         if ( count( $data ) > 0 ){
 

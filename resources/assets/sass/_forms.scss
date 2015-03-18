@@ -119,3 +119,12 @@ section.login-form{
     margin-bottom: 1em;
   }
 }
+
+.add_company{
+  border: 1px solid $darkgrey;
+  padding: 1em;
+  p{
+    font-size: $small;
+    margin-top: 1em;
+  }
+}

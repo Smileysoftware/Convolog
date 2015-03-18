@@ -23,11 +23,24 @@ class NewConversationRequest extends Request {
 	{
 		return [
             'title' => 'required',
-			'company' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+
+			'company_new' => 'required_without:company_select',
+			'company_select' => 'required_without:company_new',
 
 		];
 
 	}
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Please give your conversation a title',
+            'description.required' => 'Its better if your conversation has a description, you\'ll only forget what it\'s for',
+            'company_select.required_without' => 'You must either select a new company or add a new one',
+            'company_new.required_without' => 'You must either add a new company or select one from the list',
+
+        ];
+    }
 
 }

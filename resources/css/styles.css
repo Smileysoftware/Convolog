@@ -86,6 +86,13 @@ section.login-form {
     border: 1px solid #DADADA;
     margin-bottom: 1em; }
 
+.add_company {
+  border: 1px solid #DADADA;
+  padding: 1em; }
+  .add_company p {
+    font-size: 12px;
+    margin-top: 1em; }
+
 .button {
   text-transform: uppercase;
   line-height: 3em;

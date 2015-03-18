@@ -27,11 +27,24 @@
             <p class="duplicateRecord duplicateTitleField"></p>
         </div>
 
-        <div>
-            {!! Form::label('company' , 'Enter the name of the company you\'re talking to' ) !!}
+        {!! Form::label('company' , 'The company name' ) !!}
+        <div class="add_company">
+
             <p>
-                {!! Form::text('company',  old('company') , [ 'placeholder' => 'A & B Pots and Pans' ]  ) !!}
+                Please choose the company name if it already exists
             </p>
+            <p>
+                {!! Form::select('company_select',  array(null => 'Please select a company') + $companies  ) !!}
+            </p>
+
+            <p>
+                Or add a new company
+            </p>
+            <p>
+                {!! Form::text('company_new',  old('company') , [ 'placeholder' => 'A & B Pots and Pans' ]  ) !!}
+            </p>
+
+
         </div>
 
         <div>
