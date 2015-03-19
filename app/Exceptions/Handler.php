@@ -37,13 +37,20 @@ class Handler extends ExceptionHandler {
 	public function render($request, Exception $e)
 	{
 
-        if ($e instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException)
-            return response(view('errors.404'), 404);
+        //Error reporting only works on production
+        if ( env('APP_ENV') != 'local'){
 
-        //If we see a token mismatch, best sort it out.
-        if ( $e instanceof \Illuminate\Session\TokenMismatchException ){
-            return response(view('errors.500'), 500);
+            if ($e instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException)
+                return response(view('errors.404'), 404);
+
+            //If we see a token mismatch, best sort it out.
+            if ( $e instanceof \Illuminate\Session\TokenMismatchException ){
+                return response(view('errors.500'), 500);
+            }
+
         }
+
+
 
         return parent::render($request, $e);
     }
