@@ -5,12 +5,14 @@
 <h1>All Companies <a href="/admin/companies/create" class="btn btn-primary btn-small pull-right">Create Company</a></h1>
 
 
-<table class="table table-bordered table-striped table-hover">
-    <tr>
-        <th>id</th>
-        <th>Name</th>
-        <th>Created</th>
-    </tr>
+<table class="table table-bordered table-striped table-hover tablesorter">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Created</th>
+        </tr>
+    </thead>
     @foreach ( $companies as $company )
 
     <tr>
