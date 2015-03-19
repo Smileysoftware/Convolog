@@ -27,6 +27,7 @@ class Kernel extends HttpKernel {
 		'auth' => 'Convolog\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'Convolog\Http\Middleware\RedirectIfAuthenticated',
+        'admin' => 'Convolog\Http\Middleware\Admin'
 	];
 
 }

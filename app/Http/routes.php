@@ -38,6 +38,7 @@ Route::controllers([
 
 Route::get('bum', function(){
 
+    return \Auth::user();
 });
 
 
@@ -70,5 +71,15 @@ Route::group(['middleware' => 'auth'], function()
         Route::post('conversation/slug' , [ 'uses' => 'ApiController@conversation_slug' ] );
 
     });
+
+});
+
+Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function()
+{
+
+    Route::get('/', [ 'uses' => 'AdminController@index'] );
+
+    Route::get('users', [ 'uses' => 'AdminController@users'] );
+    Route::get('companies', [ 'uses' => 'AdminController@companies'] );
 
 });
