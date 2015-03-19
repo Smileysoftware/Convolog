@@ -27,9 +27,11 @@ class Company extends Model {
     public static function create_new_or_user_existing( $data )
     {
 
-        if ( strlen( $data['company_select'] ) > 0 )
+        if ( isset( $data['company_select'] ) )
         {
-            return $data['company_select'];
+            if ( strlen( $data['company_select'] ) > 0 ){
+                return $data['company_select'];
+            }
         }
 
         if ( isset( $data['company_new'] ) )
@@ -63,9 +65,15 @@ class Company extends Model {
      */
     public static function find_company_name( $id )
     {
-        $company = Company::find( $id )->select( 'name' )->first();
+        try{
 
-        return $company->name;
+            $company = Company::where( 'id' , $id )->first();
+
+            return $company['name'];
+        }
+        catch ( Exception $e){
+            return 'Not Found';
+        }
     }
 
 }

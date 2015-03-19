@@ -59,7 +59,7 @@ class ConversationController extends Controller {
 
         if ( $conversation_id = Conversation::store( $data ) ){
 
-            return Redirect::to( '/conversations/' . $conversation_id );
+            return Redirect::to( '/conversations/' . Conversation::generate_title_slug( $data['title'] ) );
 
         }
 
@@ -76,6 +76,8 @@ class ConversationController extends Controller {
         $user = \Auth::user();
 
         $comment_types = Config::get('convolog.comment_types');
+
+        $data = Conversation::fetch_conversation( $slug );
 
 		if ( ! $data = Conversation::fetch_conversation( $slug ) ) {
 

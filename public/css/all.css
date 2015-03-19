@@ -637,12 +637,11 @@ input.edit-button:hover {
 .conversation {
   background-color: #fff;
   padding: 0.3em 0.6em;
-  margin-bottom: 1em;
-  position: relative; }
-  .conversation strong {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em; }
+  margin-bottom: 1em; }
+  .conversation h3 {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 100; }
 
 .duplicateRecord {
   background-color: #FF6262;
