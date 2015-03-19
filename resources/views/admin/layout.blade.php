@@ -7,6 +7,11 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <style>
+            .tablesorter thead:hover{
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
 
@@ -21,5 +26,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.tablesorter.js"></script>
+   <script>
+       $(document).ready(function()
+           {
+               $(".tablesorter").tablesorter();
+           }
+       );
+   </script>
     </body>
 </html>

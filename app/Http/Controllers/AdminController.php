@@ -8,17 +8,33 @@ use Illuminate\Http\Request;
 use Convolog\User;
 use Convolog\Company;
 use Convolog\Conversation;
+use Convolog\Activity;
+
 
 class AdminController extends Controller {
 
-	public function index()
+    /**
+     * Return the index view for the admin panel
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
 	{
-        $users = User::all()->count();
-        $companies = Company::all()->count();
-        $conversations = Conversation::all()->count();
+        $users = User::all();
+        $user_count = $users->count();
+        $company_count = Company::all()->count();
+        $conversation_count = Conversation::all()->count();
 
-	    return view('admin.index' , compact( 'users' , 'companies' , 'conversations' ) );
+        $activity = Activity::all();
+
+	    return view('admin.index' , compact( 'users' , 'user_count' , 'company_count' , 'conversation_count' , 'activity' ) );
 	}
+
+    /**
+     * Return the user view
+     *
+     * @return \Illuminate\View\View
+     */
     public function users()
     {
         $users = User::all();

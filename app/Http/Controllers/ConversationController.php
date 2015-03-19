@@ -12,9 +12,11 @@ use Convolog\Comment;
 use Convolog\Company;
 
 use Config;
+use Convolog\Activity;
 
 
 class ConversationController extends Controller {
+
 
 
 	/**
@@ -58,6 +60,8 @@ class ConversationController extends Controller {
         $data['company_id'] = Company::create_new_or_user_existing( $data );
 
         if ( $conversation_id = Conversation::store( $data ) ){
+
+            Activity::add( 'Conversation' , 'A new conversation was created');
 
             return Redirect::to( '/conversations/' . Conversation::generate_title_slug( $data['title'] ) );
 
@@ -105,6 +109,8 @@ class ConversationController extends Controller {
         $conversation = $user->conversations()->with('comments')->where( 'slug' , $slug )->first();
 
         Comment::add_comment( $conversation , $data );
+
+        Activity::add( 'Comment' , 'A new comment was added');
 
         return Redirect::back()->with( 'notice-okay' , 'Comment added' );
 
