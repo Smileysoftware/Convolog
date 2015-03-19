@@ -81,5 +81,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function()
 
     Route::get('users', [ 'uses' => 'AdminController@users'] );
     Route::get('companies', [ 'uses' => 'AdminController@companies'] );
+    Route::get('companies/create', [ 'uses' => 'AdminController@companies_create'] );
+    Route::post('companies/create', [ 'uses' => 'AdminController@companies_store'] );
 
 });

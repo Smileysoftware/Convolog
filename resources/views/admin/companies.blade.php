@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>All Companies</h1>
+<h1>All Companies <a href="admin/companies/create" class="btn btn-primary btn-small pull-right">Create Company</a></h1>
 
 
 <table class="table table-bordered table-striped table-hover">
