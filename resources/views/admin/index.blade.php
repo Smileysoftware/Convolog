@@ -46,6 +46,7 @@
                     <th>Zone</th>
                     <th>Note</th>
                     <th>Date</th>
+                    <th>When</th>
                 </tr>
             </thead>
 
@@ -63,6 +64,7 @@
                 <td>{{ $action->zone }}</td>
                 <td>{{ $action->note }}</td>
                 <td>{{ $action->created_at }}</td>
+                <td>{{ $action->created_at->diffForHumans() }}</td>
             </tr>
 
             @endforeach
