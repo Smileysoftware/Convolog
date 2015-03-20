@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 use Convolog\Http\Requests\AccountRequest;
 use Convolog\Http\Requests\ChangePasswordRequest;
+use Convolog\Http\Requests\CancelAccountRequest;
 use Convolog\User;
 use Convolog\Activity;
+use Convolog\Account;
 
 class AccountController extends Controller {
 
@@ -83,6 +85,14 @@ class AccountController extends Controller {
         return \Redirect::back()->with( 'notice-okay' , 'Your password was updated');
 
     }
+
+
+
+    public function close()
+    {
+        //Close the account
+        return view('app.account.close-account');
+    }
     
 
 	/**
@@ -91,9 +101,24 @@ class AccountController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy( CancelAccountRequest $request )
 	{
-		//
+		$data = $request->all();
+
+        //If the existing password does not match our records
+        if( ! User::do_passwords_match( $data['password'] ) ){
+            return \Redirect::back()->with( 'notice-bad' , 'Your password was incorrect');
+        }
+
+        //Cancel the account
+        Account::cancel();
+
+        Activity::add('Account' , 'User cancelled their account');
+
+        \Auth::logout();
+
+        return \Redirect::to( '/auth/register' );
+
 	}
 
 }

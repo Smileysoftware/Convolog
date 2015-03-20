@@ -25,7 +25,7 @@ class NewConversationRequest extends Request {
             'title' => 'required',
             'description' => 'required',
 
-			'company_new' => 'required_without:company_select',
+			'company_new' => 'required_without:company_select|unique:companies,name',
 			'company_select' => 'required_without:company_new',
 
 		];
@@ -39,6 +39,8 @@ class NewConversationRequest extends Request {
             'description.required' => 'Its better if your conversation has a description, you\'ll only forget what it\'s for',
             'company_select.required_without' => 'You must either select a new company or add a new one',
             'company_new.required_without' => 'You must either add a new company or select one from the list',
+
+            'company_new.unique'    => 'The company is already set up'
 
         ];
     }

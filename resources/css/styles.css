@@ -1,5 +1,7 @@
 form.forms div {
   margin-bottom: 1em; }
+form.forms p {
+  margin-bottom: 1em; }
 form.forms input[type=text], form.forms input[type=email], form.forms input[type=password], form.forms textarea {
   line-height: 120%;
   padding: 0.5em;

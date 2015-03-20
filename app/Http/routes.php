@@ -38,7 +38,7 @@ Route::controllers([
 
 Route::get('bum', function(){
 
-    return \Auth::user();
+//    return Convolog\Comment::whereIn( 'conversation_id' , ['2'] )->delete();
 });
 
 
@@ -67,6 +67,9 @@ Route::group(['middleware' => 'auth' ], function()
 
     Route::get('account/change-password' , [ 'uses' => 'AccountController@change_password' ] );
     Route::post('account/change-password' , [ 'uses' => 'AccountController@update_password' ] );
+
+    Route::get('account/close' , [ 'uses' => 'AccountController@close'] );
+    Route::post('account/close' , [ 'uses' => 'AccountController@destroy'] );
 
     /**
      * Routes for the API section
