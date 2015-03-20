@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Convolog\Http\Requests\AccountRequest;
 use Convolog\Http\Requests\ChangePasswordRequest;
 use Convolog\User;
+use Convolog\Activity;
 
 class AccountController extends Controller {
 
