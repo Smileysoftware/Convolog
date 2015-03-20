@@ -64,7 +64,7 @@ class AdminController extends Controller {
 
         Company::create( $data );
 
-        return \Redirect::back();
+        return \Redirect::to( 'admin/companies' );
     }
 
 
