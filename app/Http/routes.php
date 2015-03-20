@@ -47,7 +47,7 @@ Route::get('bum', function(){
 | Authorised Routes
 |--------------------------------------------------------------------------
 */
-Route::group(['middleware' => 'auth'], function()
+Route::group(['middleware' => 'auth' ], function()
 {
 
     /*
@@ -74,7 +74,7 @@ Route::group(['middleware' => 'auth'], function()
 
 });
 
-Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function()
+Route::group(['middleware' => [ 'admin' , 'devmode' ] , 'prefix' => 'admin'], function()
 {
 
     Route::get('/', [ 'uses' => 'AdminController@index'] );
