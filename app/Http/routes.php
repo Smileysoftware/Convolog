@@ -62,6 +62,11 @@ Route::group(['middleware' => 'auth' ], function()
     Route::get( 'conversations/{slug}' , [ 'uses' => 'ConversationController@show'] );
     Route::post( 'conversations/{slug}' , [ 'uses' => 'ConversationController@add_comment'] );
 
+    Route::get('account' , [ 'uses' => 'AccountController@index' ] );
+    Route::post('account/update' , [ 'uses' => 'AccountController@update' ] );
+
+    Route::get('account/change-password' , [ 'uses' => 'AccountController@change_password' ] );
+    Route::post('account/change-password' , [ 'uses' => 'AccountController@update_password' ] );
 
     /**
      * Routes for the API section

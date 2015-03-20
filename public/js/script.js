@@ -106,5 +106,13 @@ $(document).ready(function(){
 
 
 
+    $('a#account-link').click(function(){
+       $('div#account-nav').toggle( '400' );
+
+        return false;
+    });
+
+
+
 
 });

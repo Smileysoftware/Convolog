@@ -19,7 +19,14 @@
                     <li><a href="/auth/register">Register</a></li>
                     @else
                     <li><a href="/conversations">Conversations</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
+                    <li><a href="#" id="account-link">{{ Auth::user()->name }}</a></li>
+                    <div id="account-nav">
+                        <ul>
+                            <li><a href="/account">My Account</a></li>
+                            <li><a href="/account/change-password">Change Password</a></li>
+                            <li><a href="/auth/logout">Logout</a></li>
+                        </ul>
+                    </div>
                     @endif
                 </ul>
             </nav>

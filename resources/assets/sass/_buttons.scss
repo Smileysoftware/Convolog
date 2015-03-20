@@ -84,3 +84,13 @@ input.edit-button:hover{
   color: $white;
   margin-top: 2em;
 }
+
+
+#account-link{
+  background: url('/images/icons/cog.svg') no-repeat 85% 50% $darkblue;
+  padding-right: 3em;
+  background-size: 15px;
+}
+#account-link:hover{
+  background-color: $green;
+}

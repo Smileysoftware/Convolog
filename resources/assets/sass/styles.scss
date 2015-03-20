@@ -65,6 +65,29 @@ header{
       }
     }
   }
+
+  div#account-nav{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 45px;
+    right: 0;
+    z-index: 1000;
+    background-color: #eeeeee;
+    border: 1px solid #DADADA;
+    padding: 0.5em;
+    ul{
+      li{
+        display: block;
+        a{
+          display: block;
+          text-align: left;
+          margin-left: 0;
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
 }
 
 

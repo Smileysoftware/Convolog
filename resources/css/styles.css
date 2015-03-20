@@ -173,6 +173,14 @@ input.edit-button:hover {
   color: #fff;
   margin-top: 2em; }
 
+#account-link {
+  background: url('/images/icons/cog.svg') no-repeat 85% 50% #22313F;
+  padding-right: 3em;
+  background-size: 15px; }
+
+#account-link:hover {
+  background-color: #18BC9C; }
+
 .conversation-edit {
   display: none; }
   .conversation-edit form {
@@ -288,6 +296,23 @@ header {
         margin-left: 0.5em; }
       header nav ul li a:hover {
         background-color: #18BC9C; }
+  header div#account-nav {
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 45px;
+    right: 0;
+    z-index: 1000;
+    background-color: #eeeeee;
+    border: 1px solid #DADADA;
+    padding: 0.5em; }
+    header div#account-nav ul li {
+      display: block; }
+      header div#account-nav ul li a {
+        display: block;
+        text-align: left;
+        margin-left: 0;
+        border-bottom: 1px solid #fff; }
 
 @media only screen and (max-width: 40em) {
   header nav {
