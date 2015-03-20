@@ -25,7 +25,7 @@ class AdminController extends Controller {
         $company_count = Company::all()->count();
         $conversation_count = Conversation::all()->count();
 
-        $activity = Activity::all();
+        $activity = Activity::orderBy( 'created_at' , 'desc')->get();
 
 	    return view('admin.index' , compact( 'users' , 'user_count' , 'company_count' , 'conversation_count' , 'activity' ) );
 	}
