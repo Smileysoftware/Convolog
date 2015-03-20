@@ -21,7 +21,13 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->created_at }}</td>
-            <td>{{ $user->admin }}</td>
+
+            @if ( $user->admin == 1 )
+                <td>True</td>
+            @else
+                <td>False</td>
+            @endif
+
         </tr>
 
     @endforeach
